@@ -17,7 +17,7 @@ data = dataset[["classificationId", "AccelValue"]]
 
 data = data.loc[(data["classificationId"] >=0) & (data["classificationId"] <=6)]
 #print(data)
-data = data[:1000]
+#data = data[:1000]
 
 '''
 data_two = data
