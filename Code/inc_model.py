@@ -51,8 +51,8 @@ y_df = np.array(list(y_df), dtype=np.float)
 
 X_train, X_test, y_train, y_test = train_test_split(X_df, y_df, test_size=.20)
 
-print("Logistic Regression...")
-log_clf = LogisticRegression().fit(X_train, y_train)
+print("Random Forest...")
+log_clf = RandomForestClassifier().fit(X_train, y_train)
 pred =log_clf.predict(X_test)
 score = str(metrics.accuracy_score(y_test, pred))
 print(score)
