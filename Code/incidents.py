@@ -2,7 +2,7 @@ import pandas as pd
 import re
 
 df = pd.read_csv("incidents_test.csv")
-df = df[0:1]
+
 column_size = len(df.columns) - 1
 
 

@@ -11,9 +11,6 @@ df = pd.read_csv("train.csv")
 test_df = pd.read_csv("test.csv")
 
 
-
-
-
 size = len(df.columns) -1
 size_two = len(test_df.columns) -1
 
