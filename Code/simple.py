@@ -7,8 +7,8 @@ from sklearn.ensemble import RandomForestClassifier
 from xgboost.sklearn import XGBClassifier
 
 
-df = pd.read_csv("train.csv")
-test_df = pd.read_csv("test.csv")
+df = pd.read_csv("../Data/train.csv")
+test_df = pd.read_csv("../Data/test.csv")
 
 
 size = len(df.columns) -1

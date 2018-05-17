@@ -1,3 +1,4 @@
+# Courtesy from Jenny's Group
 import pandas as pd
 
 f = open('incidents.csv', 'r')
@@ -15,12 +16,11 @@ data_string2[:300]
 o = open("fixed_incidents.csv", "w")
 o.write(data_string2)
 o.close()
-f.close()
+o.close()
 
 data = pd.read_csv("fixed_incidents.csv")
-data.head()
 
-data['RawType'] = 0
+data['rawType'] = 0
 possible_types = ['accel', 'temp', 'humidity', 'light', 'manual', 'sound']
 row_type_list = ['Unknown' for i in range(data.shape[0])]
 for row in data.itertuples():
@@ -50,4 +50,4 @@ new_data = pd.concat([accel_data, numeric_vals])
 new_data.sort_index(inplace=True)
 print(new_data['RawValue'])
 
-new_data.to_csv("incidents_more_cols.csv", index=False)
+new_data.to_csv("incidents_new.csv", index=False)
